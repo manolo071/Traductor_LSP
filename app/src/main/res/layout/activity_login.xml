@@ -16,13 +16,13 @@
         <!-- Logo centrado con margen superior -->
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="48dp"
             android:contentDescription="@string/app_logo"
-            android:src="@drawable/logo_app" />
+            android:src="@drawable/logolsp" />
 
         <!-- Contenedor de campos de formulario -->
         <LinearLayout

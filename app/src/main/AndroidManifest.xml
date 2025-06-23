@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dialogalsp">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dialogalsp"
+        tools:targetApi="31">
+
+        <!-- Pantalla principal (puede ser luego del login o selección) -->
+        <activity android:name=".MainActivity" />
+
+        <!-- Pantalla de selección (oyente o sordo) -->
+        <activity android:name=".SelectUserTypeActivity" />
+
+        <!-- Pantalla de registro -->
+        <activity android:name=".RegisterActivity" />
+
+        <!-- Pantalla de login (inicio de la app) -->
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.dialogalsp">
+    package="com.example.dialogalsp">
 
     <application
         android:allowBackup="true"
@@ -13,22 +13,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dialogalsp"
         tools:targetApi="31">
+
+        <!-- Pantallas internas (exported=false) -->
         <activity
             android:name=".PantallaOyente"
             android:exported="false" />
         <activity
             android:name=".PantallaSordo"
-            android:exported="false" /> <!-- Pantalla principal (puede ser luego del login o selección) -->
-        <activity android:name=".MainActivity" /> <!-- Pantalla de selección (oyente o sordo) -->
-        <activity android:name=".SelectUserTypeActivity" /> <!-- Pantalla de registro -->
-        <activity android:name=".RegisterActivity" /> <!-- Pantalla de login (inicio de la app) -->
-        <activity android:name=".LoginActivity">
+            android:exported="false" />
+
+        <!-- Pantalla de selección (exported=true si se llama desde fuera) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Otras actividades -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- Login (actividad principal) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

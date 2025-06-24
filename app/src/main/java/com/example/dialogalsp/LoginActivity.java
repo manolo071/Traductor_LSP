@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
+
     EditText emailInput, passwordInput;
     Button loginBtn;
     TextView registerRedirect;
@@ -38,5 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         registerRedirect.setOnClickListener(v -> {
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         });
+
     }
 }

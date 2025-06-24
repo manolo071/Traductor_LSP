@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         CardView btnSordo = findViewById(R.id.btnSordo);
         CardView btnOyente = findViewById(R.id.btnOyente);
@@ -17,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
         btnSordo.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, PantallaSordo.class);
             startActivity(intent);
-            finish(); // Opcional: cierra esta actividad si no la necesitas más
+            // finish(); // Decide si realmente necesitas cerrar MainActivity
         });
 
         btnOyente.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, PantallaOyente.class);
             startActivity(intent);
-            finish(); // Opcional: cierra esta actividad si no la necesitas más
+            // finish(); // Decide si realmente necesitas cerrar MainActivity
         });
     }
 }

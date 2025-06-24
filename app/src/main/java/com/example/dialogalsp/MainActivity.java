@@ -1,37 +1,29 @@
 package com.example.dialogalsp;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
-
-    TextView welcomeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Crear una vista de texto para mostrar un mensaje
-        welcomeText = new TextView(this);
-        welcomeText.setTextSize(20);
-        welcomeText.setPadding(32, 100, 32, 32);
+        CardView btnSordo = findViewById(R.id.btnSordo);
+        CardView btnOyente = findViewById(R.id.btnOyente);
 
-        // Obtener el tipo de usuario desde el intent
-        String userType = getIntent().getStringExtra("userType");
+        btnSordo.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, PantallaSordo.class);
+            startActivity(intent);
+            finish(); // Opcional: cierra esta actividad si no la necesitas más
+        });
 
-        if (userType != null) {
-            if (userType.equals("oyente")) {
-                welcomeText.setText("Bienvenido/a, usuario oyente 👋");
-            } else if (userType.equals("sordo")) {
-                welcomeText.setText("Bienvenido/a, usuario sordo 🤟");
-            } else {
-                welcomeText.setText("Bienvenido a DIALOGALSP");
-            }
-        } else {
-            welcomeText.setText("Bienvenido a DIALOGALSP");
-        }
-
-        setContentView(welcomeText);
+        btnOyente.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, PantallaOyente.class);
+            startActivity(intent);
+            finish(); // Opcional: cierra esta actividad si no la necesitas más
+        });
     }
 }

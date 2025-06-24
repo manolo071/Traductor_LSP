@@ -13,24 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dialogalsp"
         tools:targetApi="31">
-
-        <!-- Pantalla principal (puede ser luego del login o selección) -->
-        <activity android:name=".MainActivity" />
-
-        <!-- Pantalla de selección (oyente o sordo) -->
-        <activity android:name=".SelectUserTypeActivity" />
-
-        <!-- Pantalla de registro -->
-        <activity android:name=".RegisterActivity" />
-
-        <!-- Pantalla de login (inicio de la app) -->
+        <activity
+            android:name=".PantallaOyente"
+            android:exported="false" />
+        <activity
+            android:name=".PantallaSordo"
+            android:exported="false" /> <!-- Pantalla principal (puede ser luego del login o selección) -->
+        <activity android:name=".MainActivity" /> <!-- Pantalla de selección (oyente o sordo) -->
+        <activity android:name=".SelectUserTypeActivity" /> <!-- Pantalla de registro -->
+        <activity android:name=".RegisterActivity" /> <!-- Pantalla de login (inicio de la app) -->
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

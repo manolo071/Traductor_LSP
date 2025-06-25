@@ -13,6 +13,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="65dp"
         android:layout_above="@+id/inputLayout"
         android:fillViewport="true">
 
@@ -78,7 +79,7 @@
         android:background="#82232f"
         android:elevation="8dp">
 
-        <ImageButton
+    <ImageButton
             android:id="@+id/buttonMicro"
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -87,7 +88,8 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_micro"
             android:scaleType="centerInside"
-            android:tint="#d43e37"/>
+            android:tint="#fcfcfc"
+            android:contentDescription="Botón de micrófono" />
 
         <EditText
             android:id="@+id/editTextMessage"
@@ -109,7 +111,8 @@
             android:background="@drawable/bg_rounded_white"
             android:src="@drawable/ic_enviar"
             android:scaleType="centerInside"
-            android:tint="#d43e37"/>
+            android:tint="#d43e37"
+            android:contentDescription="Botón de enviar" />
 
         <ImageButton
             android:id="@+id/buttonRecepcionVoz"
@@ -120,6 +123,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/micro_recepcion"
             android:scaleType="centerInside"
-            android:tint="#d43e37"/>
+            android:tint="#fcfcfc"
+            android:contentDescription="Botón de recepción de voz" />
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

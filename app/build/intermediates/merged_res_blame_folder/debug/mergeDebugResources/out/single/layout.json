@@ -1,26 +1,22 @@
 [
     {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-mergeDebugResources-30:\\layout\\activity_register.xml",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\layout\\activity_register.xml"
+        "merged": "com.example.dialogalsp.app-mergeDebugResources-31:/layout/activity_register.xml",
+        "source": "com.example.dialogalsp.app-main-34:/layout/activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-mergeDebugResources-30:\\layout\\activity_pantalla_oyente.xml",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\layout\\activity_pantalla_oyente.xml"
+        "merged": "com.example.dialogalsp.app-mergeDebugResources-31:/layout/activity_login.xml",
+        "source": "com.example.dialogalsp.app-main-34:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-mergeDebugResources-30:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\layout\\activity_main.xml"
+        "merged": "com.example.dialogalsp.app-mergeDebugResources-31:/layout/activity_pantalla_oyente.xml",
+        "source": "com.example.dialogalsp.app-main-34:/layout/activity_pantalla_oyente.xml"
     },
     {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-mergeDebugResources-30:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\layout\\activity_login.xml"
+        "merged": "com.example.dialogalsp.app-mergeDebugResources-31:/layout/activity_main.xml",
+        "source": "com.example.dialogalsp.app-main-34:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.dialogalsp.app-mergeDebugResources-30:/layout/activity_pantalla_sordo.xml",
-        "source": "com.example.dialogalsp.app-main-33:/layout/activity_pantalla_sordo.xml"
-    },
-    {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-mergeDebugResources-30:\\layout\\activity_pantalla_sordo.xml",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\layout\\activity_pantalla_sordo.xml"
+        "merged": "com.example.dialogalsp.app-mergeDebugResources-31:/layout/activity_pantalla_sordo.xml",
+        "source": "com.example.dialogalsp.app-main-34:/layout/activity_pantalla_sordo.xml"
     }
 ]

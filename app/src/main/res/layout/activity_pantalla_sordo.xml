@@ -76,7 +76,7 @@
         android:layout_gravity="bottom"
         android:orientation="horizontal"
         android:padding="8dp"
-        android:background="#ab3033"
+        android:background="#82232f"
         android:elevation="8dp">
 
     <ImageButton

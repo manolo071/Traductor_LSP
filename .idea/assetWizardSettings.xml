@@ -136,6 +136,7 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="F:\logoLSP.PNG" />
+                                                <entry key="paddingPercent" value="10" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -168,9 +169,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="iconShape" value="HRECT" />
+                                      <entry key="iconShape" value="CIRCLE" />
                                       <entry key="imageAsset" value="F:\logoLSP.PNG" />
-                                      <entry key="outputName" value="logo_app" />
+                                      <entry key="outputName" value="logoapp_circle" />
                                     </map>
                                   </option>
                                 </PersistentState>

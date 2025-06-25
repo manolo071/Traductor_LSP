@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -20,7 +20,10 @@ import java.lang.String;
 
 public final class ActivityPantallaSordoBinding implements ViewBinding {
   @NonNull
-  private final CoordinatorLayout rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final LinearLayout TituloSuperior;
 
   @NonNull
   public final ImageButton buttonEnviar;
@@ -38,7 +41,7 @@ public final class ActivityPantallaSordoBinding implements ViewBinding {
   public final LinearLayout inputLayout;
 
   @NonNull
-  public final CoordinatorLayout main;
+  public final ConstraintLayout main;
 
   @NonNull
   public final RecyclerView mensajesEnviados;
@@ -46,12 +49,14 @@ public final class ActivityPantallaSordoBinding implements ViewBinding {
   @NonNull
   public final RecyclerView mensajesRecibidos;
 
-  private ActivityPantallaSordoBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull ImageButton buttonEnviar, @NonNull ImageButton buttonMicro,
-      @NonNull ImageButton buttonRecepcionVoz, @NonNull EditText editTextMessage,
-      @NonNull LinearLayout inputLayout, @NonNull CoordinatorLayout main,
-      @NonNull RecyclerView mensajesEnviados, @NonNull RecyclerView mensajesRecibidos) {
+  private ActivityPantallaSordoBinding(@NonNull ConstraintLayout rootView,
+      @NonNull LinearLayout TituloSuperior, @NonNull ImageButton buttonEnviar,
+      @NonNull ImageButton buttonMicro, @NonNull ImageButton buttonRecepcionVoz,
+      @NonNull EditText editTextMessage, @NonNull LinearLayout inputLayout,
+      @NonNull ConstraintLayout main, @NonNull RecyclerView mensajesEnviados,
+      @NonNull RecyclerView mensajesRecibidos) {
     this.rootView = rootView;
+    this.TituloSuperior = TituloSuperior;
     this.buttonEnviar = buttonEnviar;
     this.buttonMicro = buttonMicro;
     this.buttonRecepcionVoz = buttonRecepcionVoz;
@@ -64,7 +69,7 @@ public final class ActivityPantallaSordoBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public CoordinatorLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -89,6 +94,12 @@ public final class ActivityPantallaSordoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.TituloSuperior;
+      LinearLayout TituloSuperior = ViewBindings.findChildViewById(rootView, id);
+      if (TituloSuperior == null) {
+        break missingId;
+      }
+
       id = R.id.buttonEnviar;
       ImageButton buttonEnviar = ViewBindings.findChildViewById(rootView, id);
       if (buttonEnviar == null) {
@@ -119,7 +130,7 @@ public final class ActivityPantallaSordoBinding implements ViewBinding {
         break missingId;
       }
 
-      CoordinatorLayout main = (CoordinatorLayout) rootView;
+      ConstraintLayout main = (ConstraintLayout) rootView;
 
       id = R.id.mensajesEnviados;
       RecyclerView mensajesEnviados = ViewBindings.findChildViewById(rootView, id);
@@ -133,9 +144,9 @@ public final class ActivityPantallaSordoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPantallaSordoBinding((CoordinatorLayout) rootView, buttonEnviar,
-          buttonMicro, buttonRecepcionVoz, editTextMessage, inputLayout, main, mensajesEnviados,
-          mensajesRecibidos);
+      return new ActivityPantallaSordoBinding((ConstraintLayout) rootView, TituloSuperior,
+          buttonEnviar, buttonMicro, buttonRecepcionVoz, editTextMessage, inputLayout, main,
+          mensajesEnviados, mensajesRecibidos);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

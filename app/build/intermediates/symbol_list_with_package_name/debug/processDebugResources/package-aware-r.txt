@@ -3108,6 +3108,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TituloSuperior
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3811,6 +3812,7 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap logo_app
+mipmap logoapp_circle
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description

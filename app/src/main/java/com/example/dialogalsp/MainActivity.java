@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
         btnSordo.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, PantallaSordo.class);
             startActivity(intent);
-            // finish(); // Decide si realmente necesitas cerrar MainActivity
+            finish(); // Decide si realmente necesitas cerrar MainActivity
         });
 
         btnOyente.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, PantallaOyente.class);
             startActivity(intent);
-            // finish(); // Decide si realmente necesitas cerrar MainActivity
+            finish(); // Decide si realmente necesitas cerrar MainActivity
         });
     }
 }

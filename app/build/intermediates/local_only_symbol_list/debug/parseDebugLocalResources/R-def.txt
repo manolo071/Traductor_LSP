@@ -20,6 +20,7 @@ drawable logolsp
 drawable micro_recepcion
 drawable usuario_oyente
 drawable usuario_sordo
+id TituloSuperior
 id btnOyente
 id btnSordo
 id buttonEnviar
@@ -46,6 +47,7 @@ layout activity_register
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap logo_app
+mipmap logoapp_circle
 string app_logo
 string app_name
 string dont_have_account

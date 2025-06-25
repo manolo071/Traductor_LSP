@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-45:12
-INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-45:12
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:1-46:12
 MERGED from [androidx.databinding:viewbinding:8.10.1] C:\Users\Edu\.gradle\caches\8.11.1\transforms\eacd591fce48ec4a28ebc9a33eefc18d\transformed\viewbinding-8.10.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Edu\.gradle\caches\8.11.1\transforms\59c6e0e75ae321aee7ff222628cf6920\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Edu\.gradle\caches\8.11.1\transforms\97b0554bcf3747d2d42e1bea04482f81\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -58,8 +58,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Edu\.gr
 	xmlns:android
 		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:6:5-44:19
-INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:6:5-44:19
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:6:5-45:19
+INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:6:5-45:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Edu\.gradle\caches\8.11.1\transforms\59c6e0e75ae321aee7ff222628cf6920\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\Edu\.gradle\caches\8.11.1\transforms\59c6e0e75ae321aee7ff222628cf6920\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Edu\.gradle\caches\8.11.1\transforms\97b0554bcf3747d2d42e1bea04482f81\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -105,39 +105,41 @@ ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LS
 	android:name
 		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:19:13-43
 activity#com.example.dialogalsp.PantallaSordo
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:21:9-23:40
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:21:9-24:57
+	android:windowSoftInputMode
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:24:13-55
 	android:exported
 		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
 		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:22:13-42
 activity#com.example.dialogalsp.MainActivity
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:26:9-28:40
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:27:9-29:40
 	android:exported
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:28:13-37
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:27:13-41
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:28:13-41
 activity#com.example.dialogalsp.RegisterActivity
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:31:9-33:40
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:32:9-34:40
 	android:exported
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:33:13-37
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:34:13-37
 	android:name
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:32:13-45
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:33:13-45
 activity#com.example.dialogalsp.LoginActivity
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:36:9-43:20
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:37:9-44:20
 	android:exported
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:38:13-36
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:39:13-36
 	android:name
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:37:13-42
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:38:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:39:13-42:29
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:40:13-43:29
 action#android.intent.action.MAIN
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:41:17-77
+ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:41:27-74
+		ADDED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml:42:27-74
 uses-sdk
 INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\programacion\ejecutable\programacion movil\tesis java\Traductor_LSP\app\src\main\AndroidManifest.xml

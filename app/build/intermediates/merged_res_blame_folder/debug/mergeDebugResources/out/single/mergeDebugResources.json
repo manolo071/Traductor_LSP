@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-xxxhdpi\\logo_app.png"
     },
     {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-hdpi_logo_app.png.flat",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-hdpi\\logo_app.png"
-    },
-    {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-hdpi_logo_app.png.flat",
+        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-hdpi\\logo_app.png"
     },
     {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\layout_activity_pantalla_sordo.xml.flat",
@@ -34,6 +34,10 @@
     {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\drawable_micro_recepcion.png.flat",
+        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\drawable\\micro_recepcion.png"
     },
     {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\layout_activity_register.xml.flat",
@@ -56,12 +60,12 @@
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\drawable_usuario_sordo.png.flat",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\drawable\\usuario_sordo.png"
-    },
-    {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-xhdpi_logo_app.png.flat",
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-xhdpi\\logo_app.png"
+    },
+    {
+        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\drawable_usuario_sordo.png.flat",
+        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\drawable\\usuario_sordo.png"
     },
     {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -76,12 +80,12 @@
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\layout_activity_select_user_type.xml.flat",
-        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\layout\\activity_select_user_type.xml"
-    },
-    {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\drawable_ic_micro.png.flat",
+        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\drawable\\ic_micro.png"
     },
     {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\drawable_bg_rounded_white.xml.flat",
@@ -104,6 +108,10 @@
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\drawable\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\drawable_ic_enviar.png.flat",
+        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\drawable\\ic_enviar.png"
+    },
+    {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -112,12 +120,20 @@
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\layout\\activity_login.xml"
     },
     {
+        "merged": "com.example.dialogalsp.app-debug-31:/layout_activity_pantalla_sordo.xml.flat",
+        "source": "com.example.dialogalsp.app-main-33:/layout/activity_pantalla_sordo.xml"
+    },
+    {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-mdpi_logo_app.png.flat",
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-mdpi\\logo_app.png"
     },
     {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\drawable_ic_sin_sonido.png.flat",
+        "source": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-main-33:\\drawable\\ic_sin_sonido.png"
     },
     {
         "merged": "C:\\Users\\Edu\\.gradle\\daemon\\8.11.1\\com.example.dialogalsp.app-debug-31:\\mipmap-xxhdpi_ic_launcher.webp.flat",

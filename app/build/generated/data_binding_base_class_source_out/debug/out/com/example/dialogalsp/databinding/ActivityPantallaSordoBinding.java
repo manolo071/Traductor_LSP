@@ -4,30 +4,67 @@ package com.example.dialogalsp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.dialogalsp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityPantallaSordoBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
-  public final ConstraintLayout main;
+  public final ImageButton buttonEnviar;
 
-  private ActivityPantallaSordoBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout main) {
+  @NonNull
+  public final ImageButton buttonMicro;
+
+  @NonNull
+  public final ImageButton buttonRecepcionVoz;
+
+  @NonNull
+  public final EditText editTextMessage;
+
+  @NonNull
+  public final LinearLayout inputLayout;
+
+  @NonNull
+  public final CoordinatorLayout main;
+
+  @NonNull
+  public final RecyclerView mensajesEnviados;
+
+  @NonNull
+  public final RecyclerView mensajesRecibidos;
+
+  private ActivityPantallaSordoBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull ImageButton buttonEnviar, @NonNull ImageButton buttonMicro,
+      @NonNull ImageButton buttonRecepcionVoz, @NonNull EditText editTextMessage,
+      @NonNull LinearLayout inputLayout, @NonNull CoordinatorLayout main,
+      @NonNull RecyclerView mensajesEnviados, @NonNull RecyclerView mensajesRecibidos) {
     this.rootView = rootView;
+    this.buttonEnviar = buttonEnviar;
+    this.buttonMicro = buttonMicro;
+    this.buttonRecepcionVoz = buttonRecepcionVoz;
+    this.editTextMessage = editTextMessage;
+    this.inputLayout = inputLayout;
     this.main = main;
+    this.mensajesEnviados = mensajesEnviados;
+    this.mensajesRecibidos = mensajesRecibidos;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -48,12 +85,59 @@ public final class ActivityPantallaSordoBinding implements ViewBinding {
 
   @NonNull
   public static ActivityPantallaSordoBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.buttonEnviar;
+      ImageButton buttonEnviar = ViewBindings.findChildViewById(rootView, id);
+      if (buttonEnviar == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonMicro;
+      ImageButton buttonMicro = ViewBindings.findChildViewById(rootView, id);
+      if (buttonMicro == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonRecepcionVoz;
+      ImageButton buttonRecepcionVoz = ViewBindings.findChildViewById(rootView, id);
+      if (buttonRecepcionVoz == null) {
+        break missingId;
+      }
+
+      id = R.id.editTextMessage;
+      EditText editTextMessage = ViewBindings.findChildViewById(rootView, id);
+      if (editTextMessage == null) {
+        break missingId;
+      }
+
+      id = R.id.inputLayout;
+      LinearLayout inputLayout = ViewBindings.findChildViewById(rootView, id);
+      if (inputLayout == null) {
+        break missingId;
+      }
+
+      CoordinatorLayout main = (CoordinatorLayout) rootView;
+
+      id = R.id.mensajesEnviados;
+      RecyclerView mensajesEnviados = ViewBindings.findChildViewById(rootView, id);
+      if (mensajesEnviados == null) {
+        break missingId;
+      }
+
+      id = R.id.mensajesRecibidos;
+      RecyclerView mensajesRecibidos = ViewBindings.findChildViewById(rootView, id);
+      if (mensajesRecibidos == null) {
+        break missingId;
+      }
+
+      return new ActivityPantallaSordoBinding((CoordinatorLayout) rootView, buttonEnviar,
+          buttonMicro, buttonRecepcionVoz, editTextMessage, inputLayout, main, mensajesEnviados,
+          mensajesRecibidos);
     }
-
-    ConstraintLayout main = (ConstraintLayout) rootView;
-
-    return new ActivityPantallaSordoBinding((ConstraintLayout) rootView, main);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

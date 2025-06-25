@@ -20,7 +20,8 @@
             android:exported="false" />
         <activity
             android:name=".PantallaSordo"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
 
         <!-- Pantalla de selección (exported=true si se llama desde fuera) -->
         <activity

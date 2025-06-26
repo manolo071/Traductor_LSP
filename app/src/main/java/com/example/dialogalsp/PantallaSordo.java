@@ -107,12 +107,8 @@ public class PantallaSordo extends AppCompatActivity {
             mensajesEnviadosRecyclerView.post(new Runnable() {
                 @Override
                 public void run() {
-                    // Desplazarse a la última posición
                     mensajesEnviadosRecyclerView.scrollToPosition(mensajeAdapter.getItemCount() - 1);
                     mensajesEnviadosRecyclerView.smoothScrollToPosition(mensajeAdapter.getItemCount() - 1);
-
-                    // Alternativa más rápida pero sin animación:
-                    // mensajesEnviadosRecyclerView.smoothScrollToPosition(mensajeAdapter.getItemCount() - 1);
                 }
             });
 
@@ -182,11 +178,6 @@ public class PantallaSordo extends AppCompatActivity {
                     mensajesRecibidosAdapter.agregarMensaje(textoReconocido);
                     mensajesRecibidosRecyclerView.smoothScrollToPosition(
                             mensajesRecibidosAdapter.getItemCount() - 1);
-
-                    // Si está activa la recepción de voz, reproducir automáticamente
-                    if (recepcionVozActiva) {
-                        textToSpeech.speak(textoReconocido, TextToSpeech.QUEUE_FLUSH, null, null);
-                    }
                 }
             }
 
@@ -211,7 +202,6 @@ public class PantallaSordo extends AppCompatActivity {
     }
 
     private void toggleRecepcionVoz() {
-
         recepcionVozActiva = !recepcionVozActiva;
 
         // Cambiar color del icono

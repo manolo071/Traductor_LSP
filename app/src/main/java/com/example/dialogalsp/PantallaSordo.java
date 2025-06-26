@@ -1,6 +1,13 @@
 package com.example.dialogalsp;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.speech.RecognitionListener;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -8,12 +15,15 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class PantallaSordo extends AppCompatActivity {
@@ -23,6 +33,12 @@ public class PantallaSordo extends AppCompatActivity {
     private RecyclerView mensajesEnviadosRecyclerView;
     private MensajeAdapter mensajeAdapter;
     private TextToSpeech textToSpeech;
+    private ImageButton buttonMicro, buttonRecepcionVoz;
+    private RecyclerView mensajesRecibidosRecyclerView;
+    private MensajeAdapter mensajesRecibidosAdapter;
+    private SpeechRecognizer speechRecognizer;
+    private Intent speechRecognizerIntent;
+    private boolean recepcionVozActiva = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +55,28 @@ public class PantallaSordo extends AppCompatActivity {
         editTextMessage = findViewById(R.id.editTextMessage);
         buttonEnviar = findViewById(R.id.buttonEnviar);
         mensajesEnviadosRecyclerView = findViewById(R.id.mensajesEnviados);
+        buttonMicro = findViewById(R.id.buttonMicro);
+        buttonRecepcionVoz = findViewById(R.id.buttonRecepcionVoz);
+        mensajesRecibidosRecyclerView = findViewById(R.id.mensajesRecibidos);
+
+        // 2. Configurar RecyclerView para mensajes recibidos
+        mensajesRecibidosAdapter = new MensajeAdapter();
+        mensajesRecibidosRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mensajesRecibidosRecyclerView.setAdapter(mensajesRecibidosAdapter);
+
+        // 3. Configurar reconocimiento de voz
+        inicializarReconocimientoVoz();
 
         // Configurar RecyclerView
         mensajeAdapter = new MensajeAdapter();
         mensajesEnviadosRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mensajesEnviadosRecyclerView.setAdapter(mensajeAdapter);
+
+        // 4. Configurar botones
+        buttonMicro.setEnabled(false);
+        buttonMicro.setAlpha(0.5f);
+        buttonMicro.setOnClickListener(v -> activarMicrofono());
+        buttonRecepcionVoz.setOnClickListener(v -> toggleRecepcionVoz());
 
         // Inicializar TextToSpeech
         textToSpeech = new TextToSpeech(this, status -> {
@@ -75,10 +108,11 @@ public class PantallaSordo extends AppCompatActivity {
                 @Override
                 public void run() {
                     // Desplazarse a la última posición
+                    mensajesEnviadosRecyclerView.scrollToPosition(mensajeAdapter.getItemCount() - 1);
                     mensajesEnviadosRecyclerView.smoothScrollToPosition(mensajeAdapter.getItemCount() - 1);
 
                     // Alternativa más rápida pero sin animación:
-                    // mensajesEnviadosRecyclerView.scrollToPosition(mensajeAdapter.getItemCount() - 1);
+                    // mensajesEnviadosRecyclerView.smoothScrollToPosition(mensajeAdapter.getItemCount() - 1);
                 }
             });
 
@@ -99,4 +133,101 @@ public class PantallaSordo extends AppCompatActivity {
         super.onDestroy();
     }
 
+    private void inicializarReconocimientoVoz() {
+        // Verificar permiso
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.RECORD_AUDIO}, 1);
+        }
+
+        speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
+        speechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+
+        speechRecognizer.setRecognitionListener(new RecognitionListener() {
+            @Override
+            public void onReadyForSpeech(Bundle params) {
+                buttonMicro.setColorFilter(Color.RED); // Micrófono activo (rojo)
+            }
+
+            @Override
+            public void onBeginningOfSpeech() {}
+
+            @Override
+            public void onRmsChanged(float rmsdB) {}
+
+            @Override
+            public void onBufferReceived(byte[] buffer) {}
+
+            @Override
+            public void onEndOfSpeech() {
+                buttonMicro.setColorFilter(Color.WHITE); // Volver a blanco
+            }
+
+            @Override
+            public void onError(int error) {
+                buttonMicro.setColorFilter(Color.WHITE);
+                Toast.makeText(PantallaSordo.this, "Error: " + error, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResults(Bundle results) {
+                ArrayList<String> matches = results.getStringArrayList(
+                        SpeechRecognizer.RESULTS_RECOGNITION);
+                if (matches != null && !matches.isEmpty()) {
+                    String textoReconocido = matches.get(0);
+                    mensajesRecibidosAdapter.agregarMensaje(textoReconocido);
+                    mensajesRecibidosRecyclerView.smoothScrollToPosition(
+                            mensajesRecibidosAdapter.getItemCount() - 1);
+
+                    // Si está activa la recepción de voz, reproducir automáticamente
+                    if (recepcionVozActiva) {
+                        textToSpeech.speak(textoReconocido, TextToSpeech.QUEUE_FLUSH, null, null);
+                    }
+                }
+            }
+
+            @Override
+            public void onPartialResults(Bundle partialResults) {}
+
+            @Override
+            public void onEvent(int eventType, Bundle params) {}
+        });
+    }
+
+    private void activarMicrofono() {
+        if (!buttonMicro.isEnabled()) {
+            return; // No hacer nada si el botón está deshabilitado
+        }
+
+        try {
+            speechRecognizer.startListening(speechRecognizerIntent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Error al activar micrófono", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void toggleRecepcionVoz() {
+
+        recepcionVozActiva = !recepcionVozActiva;
+
+        // Cambiar color del icono
+        if (recepcionVozActiva) {
+            buttonRecepcionVoz.setColorFilter(Color.BLACK); // Activado (negro)
+            buttonMicro.setEnabled(true); // Habilitar micrófono
+            buttonMicro.setAlpha(1f); // Hacer completamente visible
+        } else {
+            buttonRecepcionVoz.setColorFilter(Color.WHITE); // Desactivado (blanco)
+            buttonMicro.setEnabled(false); // Deshabilitar micrófono
+            buttonMicro.setAlpha(0.5f); // Hacer semitransparente
+        }
+
+        // Feedback visual
+        Toast.makeText(this,
+                recepcionVozActiva ? "Recepción de voz ACTIVADA" : "Recepción de voz DESACTIVADA",
+                Toast.LENGTH_SHORT).show();
+    }
 }

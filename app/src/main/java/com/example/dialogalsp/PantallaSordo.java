@@ -212,7 +212,7 @@ public class PantallaSordo extends AppCompatActivity {
         } else {
             buttonRecepcionVoz.setColorFilter(Color.WHITE); // Desactivado (blanco)
             buttonMicro.setEnabled(false); // Deshabilitar micrófono
-            buttonMicro.setAlpha(0.5f); // Hacer semitransparente
+            buttonMicro.setAlpha(0.5f);// Hacer semitransparente
         }
 
         // Feedback visual

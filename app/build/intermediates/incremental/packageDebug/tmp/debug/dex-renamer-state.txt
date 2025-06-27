@@ -1,4 +1,4 @@
-#Wed Jun 25 22:30:30 PET 2025
+#Thu Jun 26 17:40:02 PET 2025
 base.0=D\:\\programacion\\ejecutable\\programacion movil\\tesis java\\Traductor_LSP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\programacion\\ejecutable\\programacion movil\\tesis java\\Traductor_LSP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\programacion\\ejecutable\\programacion movil\\tesis java\\Traductor_LSP\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
